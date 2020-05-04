@@ -4,11 +4,27 @@
            <span class="menu-buttons" :class="{'menu-button-active':item.state}" 
            @click="changeActive(index)" v-for="(item,index) in menu" :key="index"> {{item.name}}</span>
       </div>
-     <h1>{{returnTrue()}}</h1>
+     <neworders v-if="menu[0].state === true"/>
+     <accepted v-if="menu[1].state === true" />
+     <cancelled v-if="menu[4].state === true"/>
+     <denied v-if="menu[3].state === true" />
+     <delivered v-if="menu[2].state === true"/>
     </div>
 </template>
 <script>
+import neworders from "@/components/pages/orders/neworders.vue";
+import accepted from "@/components/pages/orders/accepted.vue";
+import cancelled from "@/components/pages/orders/cancelled.vue";
+import denied from "@/components/pages/orders/denied.vue";
+import delivered from "@/components/pages/orders/delivered.vue";
 export default {
+    components:{
+      neworders,
+      accepted,
+      cancelled,
+      denied,
+      delivered
+    },
     data(){
         return{
           menu:[
@@ -17,19 +33,19 @@ export default {
                   state:true
               },
                {
-                  name:"new 1",
+                  name:"ACCEPTED",
                   state:false
               },
                {
-                  name:"new o2",
+                  name:"DELIVERED",
                   state:false
               },
                {
-                  name:"new 3",
+                  name:"DEINIED",
                   state:false
               },
                {
-                  name:"new 4",
+                  name:"CANCELLED",
                   state:false
               },
           ]
@@ -82,4 +98,5 @@ text-transform: uppercase;
     color:white;
      background:transparent linear-gradient(270deg, #0A1338 0%, #3D466D 30%, #4D577E 49%, #3A436A 65%, #040D33 100%) 0% 0% no-repeat padding-box;
 }
+
 </style>
