@@ -4,8 +4,8 @@
         <p class="name">{{data.name}} </p>
         <P class="address">{{data.address}} </P>
     </div>
-    <button class="order-btn accept">accept</button>
-    <button class="order-btn cancel">cancel</button>
+    <button class="order-btn Accept">Accept</button>
+    <button class="order-btn Deny">Deny</button>
   </div>
 </template>
 <script>
@@ -38,19 +38,21 @@ export default {
   float: left;
   border-radius: 24px;
 }
-.accept {
+.Accept {
   background: transparent
     linear-gradient(90deg, #040d33 0%, #27377a 49%, #040d33 100%) 0% 0%
     no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000061;
   color: white;
+  cursor: pointer;
 }
-.cancel {
+.Deny {
   background: transparent
     linear-gradient(270deg, #e9e9e9 0%, #ffffff 48%, #dcdcdc 100%) 0% 0%
     no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border: 1px solid #707070;
+  cursor: pointer;
 }
 .name{
 text-align: center;
