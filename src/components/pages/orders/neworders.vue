@@ -1,22 +1,7 @@
 <template>
     <div class="new-orders">
         <ordercard v-for="item in cards" :key="item" :data="item"/>
-          <!-- <div class="wrap">
-         <div class="card">
-             <div class="container">
-                 <h4>rajkumar</h4>
-                 <p>D.NO.1-12-21/A,white field,banglore,karnataka</p>
-             </div>
-         </div>
-     </div> 
-      <div class="wrap">
-         <div class="card">
-             <div class="container">
-                 <h4>rajkumar</h4>
-                 <p>D.NO.1-12-21/A,white field,banglore,karnataka</p>
-             </div>
-         </div>
-     </div>  -->
+          
     </div>
 </template>
 
@@ -58,17 +43,5 @@ export default {
     top:6rem;
     padding:2em;
 }
-.wrap{
-    /* width:1000px;
-    margin:auto;
-    margin-top:100px; */
-}
-.card{
-    
 
-    /* margin:10px;
-    top:345px;
-    left:451px; */
-    /* height: 179px; */
-}
 </style>
