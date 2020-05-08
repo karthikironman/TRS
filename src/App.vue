@@ -15,6 +15,7 @@
     <div class="topbar">
       <p class="brand">LOGO</p>
     </div>
+    <!-- doing some change -->
     <div class="inner-content">
       <order v-if="this.menu[0].active" />
       <technician v-if="this.menu[1].active" />
