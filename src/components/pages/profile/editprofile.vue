@@ -10,7 +10,7 @@
     <div class="second-div">
       <div>
         <img class="profile-pic" src="@/assets/Hero-image1.png" />
-        
+        <button class="upload-button">UPDATE</button>
       </div>
       <div class="third-div">
 <form>
@@ -111,5 +111,15 @@ position: relative;
 }
 .button{
   border-radius: 50%;
+}
+.upload-button{
+  position: relative;
+    left: 31rem;
+    top: -6rem;
+    height: auto;
+    width: 100px;
+    padding: 5px;
+    background-color: #b9b9d8;
+    font-weight: 900;
 }
 </style>

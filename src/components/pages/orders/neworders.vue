@@ -7,31 +7,23 @@
 
 <script>
 import ordercard from "@/components/widget/ordercard"
+import axios from 'axios'
 export default {
     data(){
         return{
             cards:[
-               {
-                   name:"test",
-                   address:"asdfadsf"
-               },
-               {
-                   name:"asdfasdf",
-                   address:"asfd"
-               },
-               {
-                   name:"asdf",
-                   address:"asdfasdf"
-               },
-                {
-                   name:"karthik",
-                   address:"#1, medehalli, bangalore, krpuram"
-               }
+              
             ]
         }
     },
     components:{
         ordercard
+    },
+    mounted(){
+        axios.get('http://karthik.buzz:1880/getorders')
+        .then((result)=>{
+            this.cards = result.data;
+        })
     }
 }
 </script>
