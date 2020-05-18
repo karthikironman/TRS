@@ -13,7 +13,9 @@
       </div>
     </div>
     <div class="topbar">
-      <p class="brand">LOGO</p>
+      <p class="brand1">LOGO</p>
+      <p class="brand">logout</p>
+      
     </div>
     <!-- doing some change -->
     <div class="inner-content">
@@ -72,10 +74,15 @@ export default {
   left: 303px;
   z-index: 5;
 }
-.brand {
+.brand1 {
   float: left;
   font-size: 1.3rem;
   padding-left: 2rem;
+}
+.brand{
+  float: right;
+  font-size:1.3rem;
+  padding-right: 2rem;
 }
 .sidebar {
   padding-top: 8rem;
